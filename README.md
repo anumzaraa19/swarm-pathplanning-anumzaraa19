@@ -2,9 +2,9 @@
 
 ## Student Information
 
-- **Name:** YOUR NAME
-- **Roll Number:** YOUR ROLL NUMBER
-- **Seed:** Same as roll number
+- **Name:** ANUM ZARA
+- **Roll Number:** 01-136232-098
+- **Seed:** 01-136232098
 - **Course:** Swarm Intelligence
 - **Assignment:** Assignment 1
 
