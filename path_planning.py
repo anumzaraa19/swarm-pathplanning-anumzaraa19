@@ -402,8 +402,23 @@ def plot_solution(best_position, best_cost, history):
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
 
-    ax.set_title(
-        f"PSO Swarm-Based Path Planning | Seed={SEED}"
+   ax.set_title(
+    f"PSO Best Path | Grid {GRID_SIZE}x{GRID_SIZE} | Seed={SEED}"
+)
+
+ax.text(
+    0.02,
+    0.98,
+    f"Start: {START}  |  Goal: {GOAL}\n"
+    f"Obstacles: {len(OBSTACLES)}",
+    transform=ax.transAxes,
+    verticalalignment="top",
+    bbox=dict(
+        boxstyle="round",
+        facecolor="white",
+        alpha=0.8
+    )
+)
     )
 
     ax.grid(True, alpha=0.3)
