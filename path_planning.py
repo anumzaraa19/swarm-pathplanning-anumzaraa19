@@ -24,8 +24,9 @@ SEED = ROLL_NUMBER
 random.seed(SEED)
 np.random.seed(SEED)
 
-GRID_SIZE = 20
-OBSTACLE_PROBABILITY = 0.20
+# Grid and obstacle settings are generated from the roll-number seed
+GRID_SIZE = random.randint(15, 25)
+OBSTACLE_PROBABILITY = random.uniform(0.15, 0.25)
 
 NUM_PARTICLES = 40
 MAX_ITERATIONS = 250
