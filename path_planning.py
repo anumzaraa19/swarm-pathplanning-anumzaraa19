@@ -35,9 +35,12 @@ MAX_ITERATIONS = 250
 NUM_WAYPOINTS = 8
 
 # PSO parameters
-W = 0.72
-C1 = 1.45
-C2 = 1.45
+# Inertia weight decreases gradually to improve convergence.
+W_MAX = 0.90
+W_MIN = 0.40
+
+C1 = 1.50
+C2 = 1.50
 
 # Cost penalties
 COLLISION_PENALTY = 1000.0
@@ -259,7 +262,14 @@ def run_pso():
 
     history = [global_best_cost]
 
-    for iteration in range(MAX_ITERATIONS):
+                # Adaptive inertia weight:
+        # starts high for exploration and gradually decreases
+        # for better exploitation near the best solution.
+        W = W_MAX - (
+            (W_MAX - W_MIN)
+            * iteration
+            / MAX_ITERATIONS
+        )
 
         r1 = np.random.random(size=positions.shape)
         r2 = np.random.random(size=positions.shape)
