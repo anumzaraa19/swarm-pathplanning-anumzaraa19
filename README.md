@@ -4,7 +4,7 @@
 
 - **Name:** ANUM ZARA
 - **Roll Number:** 01-136232-098
-- **Seed:** 01-136232098
+- **Seed:** 01136232098
 - **Course:** Swarm Intelligence
 - **Assignment:** Assignment 1
 
